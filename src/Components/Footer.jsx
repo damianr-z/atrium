@@ -101,8 +101,15 @@ const Footer = () => {
             Privacy Policy
           </Link>
         </div>
+        <a
+          href="https://damianroiz.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          👨🏻‍💻 Developed by Damian Roiz
+        </a>{' '}
         <small className={styles.copyright}>
-          Copyright ©2022 - All rights reserved.
+          Copyright ©2025 - All rights reserved.
         </small>
       </div>
     </footer>
