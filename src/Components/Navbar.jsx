@@ -5,13 +5,22 @@ export default function Navbar() {
   return (
     <div className={styles.mainMenuContainer}>
       <nav className={styles.mainMenu}>
-        <input type="checkbox" name="" id="" />
+        <input type="checkbox" name="" id="nav-toggle" />
         <div className={styles.hamburgerLines}>
           <span className={styles.line}></span>
           <span className={styles.line}></span>
           <span className={styles.line}></span>
         </div>
         <ul className={styles.menuItems}>
+          <li className={styles.closeItem}>
+            <label
+              htmlFor="nav-toggle"
+              className={styles.closeBtn}
+              aria-label="Close menu"
+            >
+              &times;
+            </label>
+          </li>
           <li>
             <NavLink to="/">Home</NavLink>
           </li>
