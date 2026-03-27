@@ -1,6 +1,6 @@
 import styles from './StaffSection.module.css';
 import { Link } from 'react-router-dom';
-import { Fragment, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const data = [
   {
@@ -10,7 +10,7 @@ const data = [
     info: [
       'As the Clinic Director and Senior Physiotherapist at Atrium Physiotherapy Clinic, I oversee the operations and quality of services of a multidisciplinary team of health professionals. I have more than 20 years of experience in leading and managing a physiotherapy and massage therapy clinic, with a focus on providing personalized and evidence-based care to our clients.',
       "My core competencies include spine and manual therapy, exercise prescription, healthcare management, and sports medicine. I have a Bachelor's degree in Physical Therapy from the Faculty of Physical Therapy, Cairo University, Egypt. I am passionate about helping people recover from injuries, improve their mobility, and enhance their well-being. My mission is to deliver excellence in physiotherapy, and to promote a culture of collaboration, innovation, and continuous learning among our staff and partners.",
-    ].join('\n'),
+    ],
   },
   {
     img: '/Michelle-Herring.webp',
@@ -20,7 +20,7 @@ const data = [
       'Originally from England, I emigrated to Canada in 2010 and have since built a career centered on patient care and clinical excellence. With a background spanning dental assisting and large-scale hospital administration I solidified my expertise by completing the Medical Office Assistant program in 2017.',
       "Since joining Atrium Physiotherapy in 2021, I have been dedicated to ensuring every patient's experience is a pleasant, welcoming, and seamless one. I believe that a positive environment is the first step toward a great recovery.",
       'Outside of the clinic, you will usually find me hiking, paddleboarding, or exploring the mountains with my two daughters and the family dog.',
-    ].join('\n'),
+    ],
   },
   {
     img: '/himani.webp',
@@ -32,7 +32,7 @@ const data = [
       'She is a trained Mulligan and McKenzie therapist and has done Cyriax courses empowering her strong diagnostic skills. She is a certified Pelvic Floor therapist and Vestibular therapist.',
       "She has been using needles in her practice since 2018 and combines IMS and acupuncture to get the best out of needles. She has expertise in treating musculoskeletal injuries, spinal injuries, neurological conditions, women\'s health, and geriatrics, as well as cardiorespiratory physiotherapy.",
       'Her treatment approach involves a thorough and comprehensive biopsychosocial assessment followed by highly customised hands-on treatments and education about maintenance of a pain/symptom-free state. She focuses on prevention by optimizing posture and the biomechanics of our body.',
-    ].join('\n'),
+    ],
   },
   {
     img: '/tunde-Okikiolu.webp',
@@ -42,7 +42,7 @@ const data = [
       'Tunde Okikiolu, DPT, is a dedicated Physical Therapist with a passion for helping individuals overcome physical disabilities and regain independence. With over 30 years of experience, Tunde has a unique combination of expertise as a Physical Therapist, Return-to-Work Coordinator, and Social Worker, bringing a holistic approach to rehabilitation. His global experience spans the United States, Canada, Ghana, India, and Nigeria, working across acute care, outpatient facilities, private practices, and workplace rehabilitation settings.',
       'Tunde specializes in treating orthopedic conditions such as osteoarthritis and post-surgical rehabilitation, including knee, hip, and shoulder replacements. His expertise also extends to neurological recovery (stroke, brain injuries), work-related injuries, musculoskeletal issues, post-fracture care, and injuries affecting the neck, back, and limbs. Using Movement Systems strategies, he analyzes movement patterns to identify alignment issues and muscle imbalances, complementing this with Exercise Therapy and Instrument-Assisted Soft Tissue Manipulation (IASTM), including cupping and Gua Sha.',
       'Tunde holds a Doctorate in Physical Therapy from a leading U.S. university and is committed to delivering evidence-based, patient-centered care. Outside of his professional work, he enjoys reading, writing, and spending quality time with his wife and three sons.',
-    ].join('\n'),
+    ],
   },
   {
     img: '/Harneet-Kaur.webp',
@@ -54,7 +54,7 @@ const data = [
       'Her areas of specialization include Dry Needling (Level-I) and Pelvic Floor Physiotherapy (Level II). She provides one-on-one care, taking the time to thoroughly assess each patient and identify the root cause of pain or dysfunction—rather than treating symptoms. Whether managing chronic pain, muscle tension, or post-injury or post-surgical recovery, Harneet tailors every treatment plan to align with each patient\’s goals and lifestyle.',
       'Known for her compassionate yet results-driven approach, Harneet empowers her patients through education, hands-on therapy, personalized exercise programs, and practical strategies to prevent future injuries. Her ultimate goal is to restore confidence in movement and support patients in returning to the activities they love and enjoy.',
       'Outside of work, Harneet enjoys spending quality time with her friends and family.',
-    ].join('\n'),
+    ],
   },
   // {
   //   img: '/mariam.webp',
@@ -64,14 +64,14 @@ const data = [
   // },
 ];
 
-function StaffCard({ img, name, position, id }) {
+function StaffCard({ img, name, position, onOpen }) {
   return (
     <div className={styles.staff__card}>
-      <img src={img} alt="staff"></img>
+      <img src={img} alt="staff" />
       <div className={styles.staff__card_info}>
         <h3>{name}</h3>
         <p>{position}</p>
-        <button command="show-modal" commandfor={id}>
+        <button type="button" onClick={onOpen}>
           More
         </button>
       </div>
@@ -79,29 +79,30 @@ function StaffCard({ img, name, position, id }) {
   );
 }
 
-function Modal({ id, img, name, position, info }) {
-  const dialogRef = useRef(null);
-  const handleClose = () => {
-    if (dialogRef.current) dialogRef.current.close();
-  };
+function Modal({ dialogRef, staff, onClose }) {
+  function handleBackdropClick(e) {
+    if (e.target === e.currentTarget) onClose();
+  }
+
   return (
-    <dialog ref={dialogRef} id={id} closedby="any">
+    <dialog
+      ref={dialogRef}
+      className={styles.modal}
+      onClose={onClose}
+      onCancel={onClose}
+      onClick={handleBackdropClick}
+    >
       <div className={styles.intro}>
-        <img src={img} alt="staff" />
-        <h3>{name}</h3>
-        <h4>{position}</h4>
+        {staff ? <img src={staff.img} alt={staff.name} /> : null}
+        <h3>{staff?.name}</h3>
+        <h4>{staff?.position}</h4>
       </div>
       <div>
-        {info.split('\n').map((para, idx) => (
+        {(staff?.info ?? []).map((para, idx) => (
           <p key={idx}>{para}</p>
         ))}
       </div>
-      <button
-        onClick={handleClose}
-        popovertargetaction="hide"
-        commandfor={id}
-        command="close"
-      >
+      <button type="button" onClick={onClose}>
         X
       </button>
     </dialog>
@@ -109,6 +110,30 @@ function Modal({ id, img, name, position, info }) {
 }
 
 function StaffSection() {
+  const [selectedStaff, setSelectedStaff] = useState(null);
+  const dialogRef = useRef(null);
+
+  useEffect(() => {
+    const dialog = dialogRef.current;
+
+    if (!dialog) return;
+
+    if (selectedStaff) {
+      if (!dialog.open) {
+        dialog.showModal();
+      }
+      return;
+    }
+
+    if (dialog.open) {
+      dialog.close();
+    }
+  }, [selectedStaff]);
+
+  const handleClose = () => {
+    setSelectedStaff(null);
+  };
+
   return (
     <section className={styles.staff__section}>
       <h2>Our Staff</h2>
@@ -124,27 +149,21 @@ function StaffSection() {
         services, we are here to guide you on the right path to optimal health.
       </p>
       <div className={styles.cards__container}>
-        {data.map((staff, i) => {
-          const id = `staff-modal-${i}`;
-          return (
-            <Fragment key={id}>
-              <StaffCard
-                img={staff.img}
-                name={staff.name}
-                position={staff.position}
-                id={id}
-              />
-              <Modal
-                img={staff.img}
-                name={staff.name}
-                position={staff.position}
-                info={staff.info}
-                id={id}
-              />
-            </Fragment>
-          );
-        })}
+        {data.map((staff) => (
+          <StaffCard
+            key={staff.name}
+            img={staff.img}
+            name={staff.name}
+            position={staff.position}
+            onOpen={() => setSelectedStaff(staff)}
+          />
+        ))}
       </div>
+      <Modal
+        dialogRef={dialogRef}
+        staff={selectedStaff}
+        onClose={handleClose}
+      />
     </section>
   );
 }
