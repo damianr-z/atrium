@@ -5,15 +5,15 @@
   --fs-10: 0.625rem;
   --fs-12: 0.75rem;
   --fs-14: 0.875rem;
-  --fs-16: 1rem;
-  --fs-18: 1.125rem;
-  --fs-20: 1.25rem;
-  --fs-24: 1.5rem;
-  --fs-26: 1.75rem;
-  --fs-30: 1.875rem;
-  --fs-32: 2rem;
-  --fs-48: 3rem;
-  --fs-64: 4rem;
+  --fs-16: clamp(0.9375rem, 0.915rem + 0.114vw, 1rem);
+  --fs-18: clamp(1rem, 0.955rem + 0.227vw, 1.125rem);
+  --fs-20: clamp(1.0625rem, 0.994rem + 0.341vw, 1.25rem);
+  --fs-24: clamp(1.125rem, 0.989rem + 0.682vw, 1.5rem);
+  --fs-26: clamp(1.25rem, 1.068rem + 0.909vw, 1.75rem);
+  --fs-30: clamp(1.3125rem, 1.108rem + 1.023vw, 1.875rem);
+  --fs-32: clamp(1.375rem, 1.148rem + 1.136vw, 2rem);
+  --fs-48: clamp(1.75rem, 1.296rem + 2.273vw, 3rem);
+  --fs-64: clamp(2.1875rem, 1.528rem + 3.295vw, 4rem);
 
   /* FONT FAMILIES */
   --ff-nav: 'Ubuntu', 'Helvetica', sans-serif;
@@ -188,23 +188,6 @@ img {
   max-width: 100%;
 }
 
-@media (max-width: 25em) {
-  /*///////// MINIMUM FONT SIZES ////////////*/
-  :root {
-    --fs-10: calc(var(--fs-10) * 1.06);
-    --fs-12: calc(var(--fs-12) * 1.06);
-    --fs-14: calc(var(--fs-14) * 1.09);
-    --fs-16: calc(var(--fs-16) * 1.1);
-    --fs-18: calc(var(--fs-18) * 1.11);
-    --fs-20: calc(var(--fs-20) * 1.13);
-    --fs-24: calc(var(--fs-24) * 1.14);
-    --fs-30: calc(var(--fs-30) * 1.16);
-    --fs-32: calc(var(--fs-32) * 1.18);
-    --fs-48: calc(var(--fs-48) * 1.2);
-    --fs-64: calc(var(--fs-64) * 1.3);
-  }
-}
-
 *,
 *::before,
 *::after {
@@ -252,8 +235,7 @@ h2 {
 }
 
 h3 {
-  font: 500 var(--fs-32) / 1.15em  var(--ff-subheading);
-
+  font: 500 var(--fs-32) / 1.15em var(--ff-subheading);
 }
 
 h4 {
