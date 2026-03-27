@@ -1,25 +1,25 @@
 .article {
-    margin: 0 auto;
-    max-width: clamp(600px, 80%, 1200px);
-    margin: 3rem 1rem;
-    padding: 20px;
-    text-align: justify;
-    h1, h2, h3 {
-        margin: 2rem 0 1rem 0;
-    }
-    p {
-        margin-bottom: 0.7rem;      
-    }
-    ul{
-        margin-bottom: 1rem;
-        padding-left: 1rem;
-        list-style-type: square;
-    }
-    span {
-        font-weight: bolder;
-        text-decoration: underline;
-        text-underline-offset: 0.1em;
-
-    }
+  margin: 0 auto;
+  max-width: clamp(280px, 95vw, 1200px);
+  margin: 3rem 1rem;
+  padding: 20px;
+  text-align: justify;
+  h1,
+  h2,
+  h3 {
+    margin: 2rem 0 1rem 0;
+  }
+  p {
+    margin-bottom: 0.7rem;
+  }
+  ul {
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    list-style-type: square;
+  }
+  span {
+    font-weight: bolder;
+    text-decoration: underline;
+    text-underline-offset: 0.1em;
+  }
 }
-

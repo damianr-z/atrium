@@ -107,12 +107,22 @@
 
 @media screen and (max-width: 1200px) {
   .footer__container {
-    grid-template-columns: minmax(400px, 1fr);
+    grid-template-columns: 1fr;
     margin-bottom: 3rem;
+    padding: 0 1rem;
   }
   .page__links p,
   .hours p {
     margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .contact__list {
+    margin-left: 1rem;
+  }
+  .hours ul li {
+    width: auto;
   }
 }
 /*

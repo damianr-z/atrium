@@ -10,7 +10,8 @@
 }
 
 .text {
-  width: 800px;
+  max-width: 800px;
+  width: 100%;
   h3,
   p {
     color: var(--c-white-50);
@@ -34,5 +35,18 @@
     align-items: center;
     padding: 0 2rem;
     text-wrap: balance;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .banner__container {
+    padding-block: 2rem;
+    gap: 1.5rem;
+  }
+  .text {
+    padding: 0 1rem;
+  }
+  .button {
+    padding-right: 0;
   }
 }

@@ -1,10 +1,10 @@
 .treatments__section {
-    width: clamp(600px, 80%, 1200px);
-    > p {
-      font-size: var(--fs-18);
-      max-width: 700px;
-      margin: 3rem auto;
-    }
+  width: clamp(280px, 95vw, 1200px);
+  > p {
+    font-size: var(--fs-18);
+    max-width: 700px;
+    margin: 3rem auto;
+  }
 }
 
 .treatment__cards {
@@ -25,7 +25,9 @@
   background-color: var(--c-white-50);
   border-top: 4px solid var(--c-grey-400);
   color: var(--c-grey-400);
-  font: 450 16px/10px 'roboto', sans-serif;
+  font:
+    450 16px/10px 'roboto',
+    sans-serif;
   border-radius: 0 0 5px 5px;
   align-items: center;
   box-shadow: 2px 5px 10px rgba(0 0 0 / 0.2);
@@ -80,7 +82,8 @@
   text-wrap: pretty;
   display: block;
   grid-column: 2;
-  & p, ul {
+  & p,
+  ul {
     padding-bottom: 0.7rem;
   }
 }
@@ -89,4 +92,19 @@
   list-style: square inside;
 }
 
-
+@media screen and (max-width: 768px) {
+  .treatments__section {
+    width: 95vw;
+  }
+  .treatment__content {
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+  }
+  .treatment__content img {
+    width: 100%;
+    grid-column: 1;
+  }
+  .treatment__content div {
+    grid-column: 1;
+  }
+}

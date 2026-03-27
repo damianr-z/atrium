@@ -1,69 +1,70 @@
-
 .contactBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 2em;
+  background: var(--c-gradient-blue-bg);
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* //////////////// LOGO //////////////////////*/
+
+.logoContainer {
+  width: 300px;
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+}
+
+/* /////////////// CONTACT BUTTONS  //////////////////////////////////////*/
+
+.contactBtnContainer {
+  display: flex;
+  padding: 20px;
+  width: inherit;
+  align-items: center;
+}
+
+.contactBtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  color: var(--c-white-50);
+  cursor: pointer;
+  div {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 2em;
-    background: var(--c-gradient-blue-bg);
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  
-  /* //////////////// LOGO //////////////////////*/
-  
-  .logoContainer {
-    width: 300px;
-  }
-  
-  .logo {
-    height: 100px;
-    width: auto;
-  }
-  
-  
-  /* /////////////// CONTACT BUTTONS  //////////////////////////////////////*/
-  
-  .contactBtnContainer {
-    display: flex;
-    padding: 20px;
-    width: inherit;
-    align-items: center;
-  }
-  
-  .contactBtn {
-    display: flex;
-    flex-direction: row;
+    align-content: center;
     justify-content: center;
-    align-items: flex-start;
-    gap: 30px;
-    color: var(--c-white-50);
-    cursor: pointer;
-    div {
-      display: flex;
-      align-content: center;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      &:hover p {
-        height: 50%;
-        position: relative;
-        animation-name: show;
-        animation-duration: 0.5s;
-      }
-      p {
-        position: absolute;
-        font-weight: 400;
-        letter-spacing: 2px;
-        height: 0;
-        bottom: 0;
-        overflow: hidden;
-        text-align: start;
-        transition: height 0.7s, position 0s, ease-in-out;
-      }
+    align-items: center;
+    gap: 10px;
+    &:hover p {
+      height: 50%;
+      position: relative;
+      animation-name: show;
+      animation-duration: 0.5s;
+    }
+    p {
+      position: absolute;
+      font-weight: 400;
+      letter-spacing: 2px;
+      height: 0;
+      bottom: 0;
+      overflow: hidden;
+      text-align: start;
+      transition:
+        height 0.7s,
+        position 0s,
+        ease-in-out;
     }
   }
-  
-  /* @keyframes show {
+}
+
+/* @keyframes show {
     from {
       height: 0;
       position: absolute;
@@ -73,30 +74,51 @@
       position: relative;
     }
   } */
-  
-  .contactBtnIcon {
-    padding: 10px;
-    width: 50px;
-    height: 50px;
-    font-size: 20px;
-    background: var(--c-blue-800);
-    align-self: center;
-    line-height: 50px !important;
-    border-radius: 50%;
-    box-shadow: -3px 3px 1px 0.8px rgba(0, 0, 0, 0.2),
-      3px -1px 5px 1px rgba(255, 255, 2555, 0.3);
-    transition: all 1s linear;
-    &:hover {
-      background: none;
-      box-shadow: none;
-      color: var(--c-white-50);
-      transform: scale(1.3);
-      transition: all 0.2s ease-in-out;
-    }
+
+.contactBtnIcon {
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  background: var(--c-blue-800);
+  align-self: center;
+  line-height: 50px !important;
+  border-radius: 50%;
+  box-shadow:
+    -3px 3px 1px 0.8px rgba(0, 0, 0, 0.2),
+    3px -1px 5px 1px rgba(255, 255, 2555, 0.3);
+  transition: all 1s linear;
+  &:hover {
+    background: none;
+    box-shadow: none;
+    color: var(--c-white-50);
+    transform: scale(1.3);
+    transition: all 0.2s ease-in-out;
   }
-  
-  /*
+}
+
+/*
   It's not possible to transition on display:hidden so to elminate this <p></p> I set the height to 0 and the hide the overflow on position absolute, to make it show again I only need to modify height property on hover
   */
-  
-  
+
+@media screen and (max-width: 768px) {
+  .contactBar {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    text-align: center;
+  }
+  .logoContainer {
+    width: auto;
+  }
+  .contactBtnContainer {
+    width: 100%;
+    justify-content: center;
+    padding: 10px;
+  }
+  .contactBtn {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+}
