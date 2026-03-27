@@ -112,13 +112,14 @@
 }
 
 .modal:open {
+  display: grid;
   opacity: 1;
   transform: scale(1);
+  animation: slideIn 0.3s ease-out;
 }
 
 .modal {
   padding: 30px;
-  display: grid;
   grid-template-columns: minmax(200px, min-content) 1fr;
   justify-items: center;
   align-items: start;
@@ -127,12 +128,10 @@
   width: min(90vw, 800px);
   margin: auto;
   position: fixed;
-  opacity: 0;
   border: none;
   border-radius: 12px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   overscroll-behavior: contain;
-  animation: slideIn 0.3s ease-out;
 }
 
 .modal img {
