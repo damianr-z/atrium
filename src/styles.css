@@ -9,6 +9,7 @@
   --fs-18: 1.125rem;
   --fs-20: 1.25rem;
   --fs-24: 1.5rem;
+  --fs-26: 1.75rem;
   --fs-30: 1.875rem;
   --fs-32: 2rem;
   --fs-48: 3rem;
@@ -23,7 +24,8 @@
   --ff-link: 'Oxygen', 'Arial', sans-serif;
 
   /* BOX SHADOW */
-  --box-shadow: 0 0.4px 0.4px rgba(128, 128, 128, 0.109),
+  --box-shadow:
+    0 0.4px 0.4px rgba(128, 128, 128, 0.109),
     0 1px 1px rgba(128, 128, 128, 0.155),
     0 2.1px 2.1px rgba(128, 128, 128, 0.195),
     0 4.4px 4.4px rgba(128, 128, 128, 0.241),
@@ -209,7 +211,9 @@ img {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  transition: background-color 0.3s, border 0.3s;
+  transition:
+    background-color 0.3s,
+    border 0.3s;
 }
 
 *:disabled {
@@ -248,7 +252,8 @@ h2 {
 }
 
 h3 {
-  font: 500 var(--fs-32) / 1.15em var(--ff-subheading);
+  font: 500 var(--fs-32) / 1.15em  var(--ff-subheading);
+
 }
 
 h4 {
@@ -288,7 +293,7 @@ select:focus {
 }
 
 button {
-  font-size: calc(10px + 2vmin);
+  font-family: var(--ff-btn);
 }
 
 ul {

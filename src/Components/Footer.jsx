@@ -106,10 +106,10 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          👨🏻‍💻 Developed by Damian Roiz
+          👨🏻‍💻 Developed by Damian R.
         </a>{' '}
         <small className={styles.copyright}>
-          Copyright ©2025 - All rights reserved.
+          Copyright ©2026 - All rights reserved.
         </small>
       </div>
     </footer>
