@@ -56,12 +56,17 @@ const data = [
       'Outside of work, Harneet enjoys spending quality time with her friends and family.',
     ],
   },
-  // {
-  //   img: '/mariam.webp',
-  //   name: 'Mariam Mamo',
-  //   position: 'Massage Therapist',
-  //   info: 'Mariam Mamo is a registered message therapist. She graduated from MaKami College 3000 hours program in Calgary',
-  // },
+  {
+    img: '/Sudhanshu-Rai.webp',
+    name: 'Sudhanshu Rai, B.PT',
+    position: 'Physiotherapy Intern',
+    info: [
+      'Sudhanshu Rai, BPT is a physiotherapist practicing since 2017, with a strong background in sports rehabilitation, musculoskeletal care, and functional recovery. He has worked with a wide range of patients, from individuals managing everyday pain and movement limitations to athletes requiring structured rehabilitation and return-to-sport support.',
+      'His experience includes working in elite sports environments through the National Cricket Academy (NCA) and the BCCI system, where he contributed to athlete rehabilitation, injury prevention, and performance-focused care. In addition to sports physiotherapy, he has also treated patients in hospital and outpatient settings across musculoskeletal, neurological, and cardiorespiratory conditions.',
+      'Sudhanshu is known for his practical, evidence-based approach, combining hands-on treatment, exercise rehabilitation, and patient education to help patients reduce pain, restore function, and return confidently to the activities that matter most to them.',
+      'At Atrium Physiotherapy, he is committed to providing personalized care focused on lasting recovery, improved movement, and better overall physical health.',
+    ],
+  },
 ];
 
 function StaffCard({ img, name, position, onOpen }) {
