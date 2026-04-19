@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from 'react';
 const data = [
   {
     img: '/hala-basily.webp',
-    name: 'Hala Basily, B.Sc.P.T',
+    name: 'Hala Basily, B.SC.P.T',
     position: 'Senior Physiotherapist and Clinic Director',
     info: [
       'As the Clinic Director and Senior Physiotherapist at Atrium Physiotherapy Clinic, I oversee the operations and quality of services of a multidisciplinary team of health professionals. I have more than 20 years of experience in leading and managing a physiotherapy and massage therapy clinic, with a focus on providing personalized and evidence-based care to our clients.',
@@ -24,7 +24,7 @@ const data = [
   },
   {
     img: '/himani.webp',
-    name: 'Himani Goyal, MPT, B.Sc.PT, CAFCI',
+    name: 'Himani Goyal, MPT, B.SC.P.T, CAFCI',
     position: 'Pelvic Floor and Vestibular Rehab Physiotherapist',
     info: [
       "Himani\'s journey with physiotherapy began at an early age of 15, when her grandmother's spinal injury at age 55 left her bedridden. Physiotherapy created a special place in her heart when the physiotherapist made her grandma mobile enough to be able to sit and feed herself and adapt to a new way of living against all hopes.",
@@ -35,20 +35,16 @@ const data = [
     ],
   },
   // {
-  //   img: '/himani.webp',
+  //   img: '/mariam-mamo.webp',
   //   name: 'Mariam Mamo',
   //   position: 'Massage Therapist',
   //   info: [
-  //     "Mariam Mamo is a registered message therapist. She graduated from MaKami College 3000 hours program in Calgary",
-  //     'She has been a physiotherapist since 2005 when she finished her Bachelors in Physiotherapy. She pursued her Masters in Physiotherapy from 2006-2008 along with her successful practice.',
-  //     'She is a trained Mulligan and McKenzie therapist and has done Cyriax courses empowering her strong diagnostic skills. She is a certified Pelvic Floor therapist and Vestibular therapist.',
-  //     "She has been using needles in her practice since 2018 and combines IMS and acupuncture to get the best out of needles. She has expertise in treating musculoskeletal injuries, spinal injuries, neurological conditions, women\'s health, and geriatrics, as well as cardiorespiratory physiotherapy.",
-  //     'Her treatment approach involves a thorough and comprehensive biopsychosocial assessment followed by highly customised hands-on treatments and education about maintenance of a pain/symptom-free state. She focuses on prevention by optimizing posture and the biomechanics of our body.',
+  //     'Mariam Mamo is a registered message therapist. She graduated from MaKami College 3000 hours program in Calgary',
   //   ],
   // },
   {
     img: '/tunde-Okikiolu.webp',
-    name: 'Tunde Okikiolu, DPT, B.SC.PT',
+    name: 'Tunde Okikiolu, DPT, B.SC.P.T',
     position: 'Senior Physiotherapy Consultant',
     info: [
       'Tunde Okikiolu, DPT, is a dedicated Physical Therapist with a passion for helping individuals overcome physical disabilities and regain independence. With over 30 years of experience, Tunde has a unique combination of expertise as a Physical Therapist, Return-to-Work Coordinator, and Social Worker, bringing a holistic approach to rehabilitation. His global experience spans the United States, Canada, Ghana, India, and Nigeria, working across acute care, outpatient facilities, private practices, and workplace rehabilitation settings.',
@@ -70,7 +66,7 @@ const data = [
   },
   {
     img: '/Sudhanshu-Rai.webp',
-    name: 'Sudhanshu Rai, B.PT',
+    name: 'Sudhanshu Rai, B.P.T',
     position: 'Physiotherapy Intern',
     info: [
       'Sudhanshu Rai, BPT is a physiotherapist practicing since 2017, with a strong background in sports rehabilitation, musculoskeletal care, and functional recovery. He has worked with a wide range of patients, from individuals managing everyday pain and movement limitations to athletes requiring structured rehabilitation and return-to-sport support.',
