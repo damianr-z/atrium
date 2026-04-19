@@ -4,9 +4,9 @@ import { useEffect, useRef, useState } from 'react';
 
 const data = [
   {
-    img: '/hala.webp',
-    name: 'Hala Basily',
-    position: 'Clinic Director',
+    img: '/hala-basily.webp',
+    name: 'Hala Basily, B.Sc.P.T',
+    position: 'Senior Physiotherapist and Clinic Director',
     info: [
       'As the Clinic Director and Senior Physiotherapist at Atrium Physiotherapy Clinic, I oversee the operations and quality of services of a multidisciplinary team of health professionals. I have more than 20 years of experience in leading and managing a physiotherapy and massage therapy clinic, with a focus on providing personalized and evidence-based care to our clients.',
       "My core competencies include spine and manual therapy, exercise prescription, healthcare management, and sports medicine. I have a Bachelor's degree in Physical Therapy from the Faculty of Physical Therapy, Cairo University, Egypt. I am passionate about helping people recover from injuries, improve their mobility, and enhance their well-being. My mission is to deliver excellence in physiotherapy, and to promote a culture of collaboration, innovation, and continuous learning among our staff and partners.",
@@ -34,6 +34,18 @@ const data = [
       'Her treatment approach involves a thorough and comprehensive biopsychosocial assessment followed by highly customised hands-on treatments and education about maintenance of a pain/symptom-free state. She focuses on prevention by optimizing posture and the biomechanics of our body.',
     ],
   },
+  // {
+  //   img: '/himani.webp',
+  //   name: 'Mariam Mamo',
+  //   position: 'Massage Therapist',
+  //   info: [
+  //     "Mariam Mamo is a registered message therapist. She graduated from MaKami College 3000 hours program in Calgary",
+  //     'She has been a physiotherapist since 2005 when she finished her Bachelors in Physiotherapy. She pursued her Masters in Physiotherapy from 2006-2008 along with her successful practice.',
+  //     'She is a trained Mulligan and McKenzie therapist and has done Cyriax courses empowering her strong diagnostic skills. She is a certified Pelvic Floor therapist and Vestibular therapist.',
+  //     "She has been using needles in her practice since 2018 and combines IMS and acupuncture to get the best out of needles. She has expertise in treating musculoskeletal injuries, spinal injuries, neurological conditions, women\'s health, and geriatrics, as well as cardiorespiratory physiotherapy.",
+  //     'Her treatment approach involves a thorough and comprehensive biopsychosocial assessment followed by highly customised hands-on treatments and education about maintenance of a pain/symptom-free state. She focuses on prevention by optimizing posture and the biomechanics of our body.',
+  //   ],
+  // },
   {
     img: '/tunde-Okikiolu.webp',
     name: 'Tunde Okikiolu, DPT, B.SC.PT',

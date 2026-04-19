@@ -82,7 +82,7 @@ const Footer = () => {
               Friday:<span>7:00 am - 8:00 pm</span>
             </li>
             <li>
-              Saturday:<span>Closed</span>
+              Saturday:<span>9:00 am - 2:00 pm</span>
             </li>
             <li>
               Sunday:<span>Closed</span>
