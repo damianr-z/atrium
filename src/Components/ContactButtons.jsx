@@ -1,9 +1,16 @@
 import styles from './ContactButtons.module.css';
+import { PiEnvelopeSimple } from 'react-icons/pi';
+import { FaMapMarkerAlt, FaFax } from 'react-icons/fa';
+import { FaPhone } from 'react-icons/fa6';
 
-function Button({ icon, text }) {
+function Button({ Icon, text, iconClass }) {
   return (
     <div className={styles.button}>
-      <i className={`${styles.button_icon} ${icon}`}></i>
+      <div className={styles.button_icon_wrap}>
+        <Icon
+          className={`${styles.button_icon}${iconClass ? ` ${styles[iconClass]}` : ''}`}
+        />
+      </div>
       <span>{text}</span>
     </div>
   );
@@ -12,19 +19,23 @@ function Button({ icon, text }) {
 export default function ContactButtons() {
   return (
     <div className={styles.contact__buttons}>
-      <Button icon="far fa-envelope" text="admin@atriumphysiotherapy.com" />
       <Button
-        icon="fas fa-map-marker-alt"
+        Icon={PiEnvelopeSimple}
+        iconClass="button_icon--lg"
+        text="admin@atriumphysiotherapy.com"
+      />
+      <Button
+        Icon={FaMapMarkerAlt}
         text={
-          <span>
+          <>
             340 Midpark Way SE - Suite 140
             <br />
             Calgary, AB, T2X 1P1
-          </span>
+          </>
         }
       />
-      <Button icon="fas fa-phone" text="+1(403)-255 4461" />
-      <Button icon="fas fa-fax" text="+1(403)-259 8776" />
+      <Button Icon={FaPhone} text="+1(403)-255 4461" />
+      <Button Icon={FaFax} text="+1(403)-259 8776" />
     </div>
   );
 }
