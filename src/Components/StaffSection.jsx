@@ -34,14 +34,16 @@ const data = [
       'Her treatment approach involves a thorough and comprehensive biopsychosocial assessment followed by highly customised hands-on treatments and education about maintenance of a pain/symptom-free state. She focuses on prevention by optimizing posture and the biomechanics of our body.',
     ],
   },
-  // {
-  //   img: '/mariam-mamo.webp',
-  //   name: 'Mariam Mamo',
-  //   position: 'Massage Therapist',
-  //   info: [
-  //     'Mariam Mamo is a registered message therapist. She graduated from MaKami College 3000 hours program in Calgary',
-  //   ],
-  // },
+  {
+    img: '/mariam-mamo.webp',
+    name: 'Mariam Mamo',
+    position: 'Massage Therapist',
+    info: [
+      'Mariam Mamo is a registered massage therapist. She graduated from Makami College in Calgary',
+      'Mamo has more than 10 years experience in deep tissue, maternity and relaxation massages.',
+      'She enjoys driving to the mountains, travelling, and spending time with her family',
+    ],
+  },
   {
     img: '/tunde-Okikiolu.webp',
     name: 'Tunde Okikiolu, DPT, B.SC.P.T',
@@ -55,7 +57,7 @@ const data = [
   {
     img: '/Harneet-Kaur.webp',
     name: 'Harneet Kaur MPT, B.SC.P.T',
-    position: 'Massage Physiotherapist',
+    position: 'Physiotherapist',
     info: [
       'Harneet is a dedicated physiotherapist who completed her Master’s in Physiotherapy in 2014 in Punjab, India. She brings extensive experience from both hospital and private practice settings, offering a well-rounded and evidence-based approach to patient care.',
       'She is passionate about delivering patient-centered treatment, creating individualized plans that focus on helping people recover from injuries, restore mobility, and improve overall function. Harneet is committed to helping her patients move better, heal faster, and live pain-free.',
