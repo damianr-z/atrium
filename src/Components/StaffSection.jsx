@@ -39,9 +39,9 @@ const data = [
     name: 'Mariam Mamo',
     position: 'Massage Therapist',
     info: [
-      'Mariam Mamo is a registered massage therapist. She graduated from Makami College in Calgary',
+      'Mariam Mamo is a registered massage therapist. She graduated from Makami College in Calgary.',
       'Mamo has more than 10 years experience in deep tissue, maternity and relaxation massages.',
-      'She enjoys driving to the mountains, travelling, and spending time with her family',
+      'She enjoys driving to the mountains, travelling, and spending time with her family.',
     ],
   },
   {
