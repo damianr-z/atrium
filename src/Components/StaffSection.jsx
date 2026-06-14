@@ -47,7 +47,7 @@ const data = [
   {
     img: '/tunde-Okikiolu.webp',
     name: 'Tunde Okikiolu, DPT, B.SC.P.T',
-    position: 'Senior Physiotherapy Consultant',
+    position: 'Senior Physiotherapy \n Consultant',
     info: [
       'Tunde Okikiolu, DPT, is a dedicated Physical Therapist with a passion for helping individuals overcome physical disabilities and regain independence. With over 30 years of experience, Tunde has a unique combination of expertise as a Physical Therapist, Return-to-Work Coordinator, and Social Worker, bringing a holistic approach to rehabilitation. His global experience spans the United States, Canada, Ghana, India, and Nigeria, working across acute care, outpatient facilities, private practices, and workplace rehabilitation settings.',
       'Tunde specializes in treating orthopedic conditions such as osteoarthritis and post-surgical rehabilitation, including knee, hip, and shoulder replacements. His expertise also extends to neurological recovery (stroke, brain injuries), work-related injuries, musculoskeletal issues, post-fracture care, and injuries affecting the neck, back, and limbs. Using Movement Systems strategies, he analyzes movement patterns to identify alignment issues and muscle imbalances, complementing this with Exercise Therapy and Instrument-Assisted Soft Tissue Manipulation (IASTM), including cupping and Gua Sha.',
