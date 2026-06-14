@@ -32,7 +32,7 @@
   flex-shrink: 0;
 }
 
-.contact__buttons .button:hover .button_icon_wrap {
+.contact__buttons .button--active .button_icon_wrap {
   background: none;
   box-shadow: none;
   transform: scale(1.3);
@@ -85,7 +85,7 @@
     max-width 0.35s ease 0.15s;
 }
 
-.contact__buttons .button:hover > span {
+.contact__buttons .button--active > span {
   max-width: max-content; /* expand to natural text width */
   opacity: 1;
   /* hover-IN: expand first, then fade in */

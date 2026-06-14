@@ -12,7 +12,6 @@ import Terms from './Pages/Terms/Terms';
 import { Toaster } from 'react-hot-toast';
 import ScrollToTop from './Components/ScrollToTop';
 import './styles.css';
-import '../src/Components/components.css';
 
 const queryClient = new QueryClient({
   defaultOptions: {
